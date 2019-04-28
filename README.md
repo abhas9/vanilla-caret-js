@@ -4,8 +4,16 @@ Set and get Caret position (contenteditable or TextArea) using Vanilla JavaScrip
 [![Donate][donate-image]][paypal-link]
 [![MIT License][license-image]][license-url]
 
-
-# Example
+# Setup
+```shell
+$ npm i vanilla-caret-js
+const VanillaCaret = require('./vanilla-caret-js');
+```
+OR
+```javascript
+<script src="https://abhas9.github.io/vanilla-caret-js/dist/VanillaCaret.min.js"></script>
+```
+# Example Usage
 
 ```javascript
 var caret = new VanillaCaret(document.getElementById('root')); // Initialize
@@ -13,8 +21,7 @@ caret.setPos(4); // Set
 document.getElementById('currentPosition').value = caret.getPos(); // Get
 ```
 
-
-# Usage
+# Development
 
 Once you've downloaded the files in this repo please run the following command in your terminal from the project folder (it may require `sudo`):
 
