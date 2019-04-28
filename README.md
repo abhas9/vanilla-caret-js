@@ -60,7 +60,7 @@ $ node make serve # or also `$ npm run serve`
 [npm-size-image]: https://img.shields.io/bundlephobia/min/vanilla-caret-js.svg?style=flat-square
 
 [travis-url]:https://travis-ci.org/abhas9/vanilla-caret-js
-[travis-image]: https://travis-ci.org/abhas9/vanilla-caret-js.svg?branch=master?style=flat-square
+[travis-image]: https://api.travis-ci.org/abhas9/vanilla-caret-js.svg?branch=master&style=flat-square
 
 
 
