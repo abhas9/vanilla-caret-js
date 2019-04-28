@@ -6,8 +6,8 @@
                 Vanilla Caret Js
             </title>
             <meta name="viewport" content="width=device-width, initial-scale=1">
-
-            <link rel="stylesheet" href="https://cdn.rawgit.com/Chalarangelo/mini.css/v3.0.1/dist/mini-default.min.css">
+            <meta name="description" content="VanillaCaretJS: A simple JavaScript library to Set and get Caret position (contenteditable or TextArea)" />
+            <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/skeleton/2.0.4/skeleton.min.css">
             <style type="text/css">
             	.title {
             		margin-bottom: 0px;
@@ -28,7 +28,17 @@
             	}
             	.doc {
             		text-align: left;
+            		background-color: #f6f8fa;
+				    border-radius: 3px;
+				    line-height: 1.45;
+				    overflow: auto;
+				    padding: 16px;
             	}
+            	pre {
+				  white-space: pre-wrap;
+				  word-wrap: break-word;
+				  text-align: justify;
+				}
             </style>
             <script src="./dist/VanillaCaret.js"></script>
         </meta>
@@ -39,7 +49,7 @@
     			<h2 class="subtitle">Set and get Caret position (contenteditable or TextArea) in pure vanilla JavaScript</h2>
 				  <div class="row">
 				    <div class="col-md-12">
-				    	<div class="edit" contenteditable="true" id="root"><b>Hello</b> <span>World.</span> Welcome to Succinct Caret Js</div>
+				    	<div class="edit" contenteditable="true" id="root"><b>Hello</b> <span>World.</span> Welcome to Vanilla Caret Js</div>
 				    	<div class="row">
 				    		<div class="col-md-6">
 				    			<label for="position">Position</label>
@@ -70,7 +80,7 @@
 npm install vanilla-caret-js
 const VanillaCaret = require('vanilla-caret-js');
 </pre>
-<h3>OR</h3>
+<h5>OR</h5>
 <pre class="doc">&lt;script src=&quot;https://cdn.jsdelivr.net/npm/vanilla-caret-js@1.0.1/dist/VanillaCaret.min.js&quot;&gt;&lt;/script&gt;</pre>
 				  	</div>
 				  </div>
