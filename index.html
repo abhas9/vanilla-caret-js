@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+            <title>
+                Vanilla Caret Js
+            </title>
+            <meta name="viewport" content="width=device-width, initial-scale=1">
+
+            <link rel="stylesheet" href="https://cdn.rawgit.com/Chalarangelo/mini.css/v3.0.1/dist/mini-default.min.css">
+            <style type="text/css">
+            	.title {
+            		margin-bottom: 0px;
+            	}
+            	.subtitle {
+            		margin-top: 0px;
+            		font-size: 16px;
+            		color: #1465c0;
+            	}
+            	.container {
+            		max-width: 800px;
+            	}
+            	.edit {
+            		border: 1px dotted #333;
+            		border-radius: 5px;
+            		padding: 10px;
+            		font-size: 2rem;
+            	}
+            	.doc {
+            		text-align: left;
+            	}
+            </style>
+            <script src="./dist/VanillaCaret.js"></script>
+        </meta>
+    </head>
+    <body>
+    		<div class="container">
+    			<h1 class="title">VanillaCaretJS</h1>
+    			<h2 class="subtitle">Set and get Caret position (contenteditable or TextArea) in pure vanilla JavaScript</h2>
+				  <div class="row">
+				    <div class="col-md-12">
+				    	<div class="edit" contenteditable="true" id="root"><b>Hello</b> <span>World.</span> Welcome to Succinct Caret Js</div>
+				    	<div class="row">
+				    		<div class="col-md-6">
+				    			<label for="position">Position</label>
+			        		<input type="text" id="position" value="4">
+			        	</div>
+			        	<div class="col-md-6">
+			        		<button id="submit" onclick="setPos()">Set Position</button>
+			        	</div>
+			      	</div>
+			      	<div class="row">
+
+				    		<div class="col-md-6">
+				    			<label for="currentPosition">Current Position</label>
+			        		<input type="text" id="currentPosition" disabled value="4">
+			        	</div>
+			        	<div class="col-md-6">
+			        		<button id="getPos" onmousedown="getPos()">Get Position</button>
+			        	</div>
+			      	</div>
+				    </div>
+				  </div>
+
+				  <div class="row">
+				  	<div class="col-md-12"><hr/></div>
+				  	<div class="col-md-12">
+				  			<h2>Example</h2>
+				  			<pre class="doc">
+var caret = new VanillaCaret(document.getElementById('root')); // Initialize
+caret.setPos(4); // Set
+document.getElementById('currentPosition').value = caret.getPos(); // Get</pre>
+				  	</div>
+				  </div>
+				</div>
+
+        <script type="text/javascript">
+          document.addEventListener("DOMContentLoaded", function(event) {
+					  var caret = new VanillaCaret(document.getElementById('root'));
+						caret.setPos(4);
+					});
+
+					function setPos() {
+						  var caret = new VanillaCaret(document.getElementById('root'));
+						  var value = parseInt(document.getElementById('position').value);
+						  caret.setPos(value);
+					    setTimeout(function() {
+					    	document.getElementById('currentPosition').value = caret.getPos();
+					    }, 300)
+					}
+
+					function getPos() {
+						  var caret = new SuccinctCaret(document.getElementById('root'));
+						  document.getElementById('currentPosition').value = caret.getPos();
+					}
+
+      </script>
+    </body>
+</html>
