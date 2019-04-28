@@ -3,6 +3,7 @@ Set and get Caret position (contenteditable or TextArea) using Vanilla JavaScrip
 
 [![NPM version][npm-version-image]][npm-url]
 [![NPM size][npm-size-image]][npm-url]
+[![Build Status][travis-image]][travis-url]
 [![Donate][donate-image]][paypal-link]
 [![MIT License][license-image]][license-url]
 
@@ -57,5 +58,9 @@ $ node make serve # or also `$ npm run serve`
 [npm-url]: https://www.npmjs.com/package/vanilla-caret-js
 [npm-version-image]: http://img.shields.io/npm/v/vanilla-caret-js.svg?style=flat-square
 [npm-size-image]: https://img.shields.io/bundlephobia/min/vanilla-caret-js.svg?style=flat-square
+
+[travis-url]:https://travis-ci.org/abhas9/vanilla-caret-js
+[travis-image]: https://travis-ci.org/abhas9/vanilla-caret-js.svg?branch=master?style=flat-square
+
 
 
