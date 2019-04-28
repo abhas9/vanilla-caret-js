@@ -7,6 +7,10 @@ Set and get Caret position (contenteditable or TextArea) using Vanilla JavaScrip
 [![Donate][donate-image]][paypal-link]
 [![MIT License][license-image]][license-url]
 
+# Demo
+[![Demo](https://media.giphy.com/media/fndxOJjHJMvZqWEJBT/giphy.gif)](http://abhas9.github.io/vanilla-caret-js)
+
+
 # Setup
 ```shell
 $ npm i vanilla-caret-js
