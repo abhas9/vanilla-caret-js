@@ -2,6 +2,7 @@
   "name": "vanilla-caret-js",
   "version": "1.0.0",
   "description": "Set and get Caret position (contenteditable or TextArea) using Vanilla JavaScript",
+  "main": "index.js",
   "jsnext:main": "src/index.js",
   "scripts": {
     "test": "node make test",
