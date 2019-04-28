@@ -1,6 +1,8 @@
 Set and get Caret position (contenteditable or TextArea) using Vanilla JavaScript
 ====================
 
+[![NPM version][npm-version-image]][npm-url]
+[![NPM size][npm-size-image]][npm-url]
 [![Donate][donate-image]][paypal-link]
 [![MIT License][license-image]][license-url]
 
@@ -51,4 +53,9 @@ $ node make serve # or also `$ npm run serve`
 
 [paypal-link]:https://www.paypal.me/abhas9
 [donate-image]:https://img.shields.io/badge/donate-%E2%9D%A4-brightgreen.svg?style=flat-square
+
+[npm-url]: https://www.npmjs.com/package/vanilla-caret-js
+[npm-version-image]: http://img.shields.io/npm/v/vanilla-caret-js.svg?style=flat-square
+[npm-size-image]: https://img.shields.io/bundlephobia/min/vanilla-caret-js.svg?style=flat-square
+
 
