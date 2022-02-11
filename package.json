@@ -37,7 +37,7 @@
     "chokidar": "^2.1.5",
     "eslint": "^4.8.0",
     "gh-pages-deploy": "^0.5.1",
-    "karma": "^1.7.1",
+    "karma": "^6.3.14",
     "karma-babel-preprocessor": "^7.0.0",
     "karma-chrome-launcher": "^2.2.0",
     "karma-coverage": "^1.1.1",
