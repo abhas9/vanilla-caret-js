@@ -11,7 +11,7 @@ const VanillaCaret = require('vanilla-caret-js');
 ```
 OR
 ```javascript
-<script src="https://cdn.jsdelivr.net/npm/vanilla-caret-js@1.0.1/dist/VanillaCaret.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/vanilla-caret-js@1.1.0/dist/VanillaCaret.min.js"></script>
 ```
 # Example Usage
 
