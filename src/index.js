@@ -17,7 +17,7 @@ export default class VanillaCaret {
     if (document.activeElement !== this.target) {
       return -1
     }
-    if (this.isContentEditable) {
+    if (this.isContentEditable === 'true') {
       this.target.focus()
       let _range = document.getSelection().getRangeAt(0)
       let range = _range.cloneRange()
@@ -34,7 +34,7 @@ export default class VanillaCaret {
    * @param {number} position - caret position
    */
   setPos(position) {
-    if (this.isContentEditable) {
+    if (this.isContentEditable === 'true') {
       if (position >= 0) {
         var selection = window.getSelection()
         var range = this.createRange(this.target, {
