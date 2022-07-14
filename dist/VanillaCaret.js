@@ -51,7 +51,7 @@
         if (document.activeElement !== this.target) {
           return -1;
         }
-        if (this.isContentEditable) {
+        if (this.isContentEditable === 'true') {
           this.target.focus();
           var _range = document.getSelection().getRangeAt(0);
           var range = _range.cloneRange();
@@ -65,7 +65,7 @@
     }, {
       key: 'setPos',
       value: function setPos(position) {
-        if (this.isContentEditable) {
+        if (this.isContentEditable === 'true') {
           if (position >= 0) {
             var selection = window.getSelection();
             var range = this.createRange(this.target, {

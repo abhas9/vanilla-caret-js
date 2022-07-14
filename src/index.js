@@ -1,7 +1,7 @@
 export default class VanillaCaret {
   /**
    * get/set caret position
-   * @param {HTMLColletion} target 
+   * @param {HTMLColletion} target
    */
   constructor(target) {
     this.target = target
