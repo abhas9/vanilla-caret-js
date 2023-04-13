@@ -47,6 +47,7 @@ export default class VanillaCaret {
         }
       }
     } else {
+      this.target.focus();
       this.target.setSelectionRange(position, position)
     }
   }
