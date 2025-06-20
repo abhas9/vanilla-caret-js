@@ -34,7 +34,7 @@
     "babel-plugin-transform-es2015-modules-umd": "^6.24.1",
     "babel-preset-env": "^1.6.0",
     "chai": "^4.1.2",
-    "chokidar": "^2.1.5",
+    "chokidar": "^4.0.3",
     "eslint": "^4.8.0",
     "gh-pages-deploy": "^0.5.1",
     "karma": "^6.3.14",
