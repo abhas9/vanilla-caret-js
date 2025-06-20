@@ -1,7 +1,8 @@
 export default class VanillaCaret {
   /**
-   * get/set caret position
-   * @param {HTMLColletion} target
+   * Create a new caret helper.
+   *
+   * @param {HTMLElement} target element to read or set the caret position on
    */
   constructor(target) {
     this.target = target
@@ -9,11 +10,12 @@ export default class VanillaCaret {
   }
 
   /**
-   * get caret position
-   * @returns {number} : -1 if elememnt is not in focus
+   * Return the current caret position.
+   *
+   * @returns {number} -1 if element is not in focus
    */
   getPos() {
-    // for contentedit field
+    // for contenteditable field
     if (document.activeElement !== this.target) {
       return -1
     }
@@ -25,19 +27,20 @@ export default class VanillaCaret {
       range.setEnd(_range.endContainer, _range.endOffset)
       return range.toString().length
     }
-    // for texterea/input element
+    // for textarea/input element
     return this.target.selectionStart
   }
 
   /**
-   * set caret position
-   * @param {number} position - caret position
+   * Set the caret position.
+   *
+   * @param {number} position caret position to set
    */
   setPos(position) {
     if (this.isContentEditable === 'true') {
       if (position >= 0) {
-        var selection = window.getSelection()
-        var range = this.createRange(this.target, {
+        const selection = window.getSelection()
+        const range = this.createRange(this.target, {
           count: position
         })
         if (range) {
@@ -52,6 +55,14 @@ export default class VanillaCaret {
     }
   }
 
+  /**
+   * Helper used to create a range for a given position.
+   *
+   * @param {Node} node  node to inspect
+   * @param {{count: number}} chars current characters left
+   * @param {Range} [range] working range
+   * @returns {Range}
+   */
   createRange(node, chars, range) {
     if (!range) {
       range = document.createRange()
@@ -69,7 +80,7 @@ export default class VanillaCaret {
           chars.count = 0
         }
       } else {
-        for (var lp = 0; lp < node.childNodes.length; lp++) {
+        for (let lp = 0; lp < node.childNodes.length; lp++) {
           range = this.createRange(node.childNodes[lp], chars, range)
           if (chars.count === 0) {
             break
