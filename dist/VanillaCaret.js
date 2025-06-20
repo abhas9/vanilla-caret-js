@@ -42,7 +42,9 @@
       _classCallCheck(this, VanillaCaret);
 
       this.target = target;
-      this.isContentEditable = target && target.contentEditable;
+      // use the boolean `isContentEditable` property so that we do not rely on
+      // the string value returned by `contentEditable`
+      this.isContentEditable = !!(target && target.isContentEditable);
     }
 
     _createClass(VanillaCaret, [{
@@ -51,7 +53,7 @@
         if (document.activeElement !== this.target) {
           return -1;
         }
-        if (this.isContentEditable === 'true') {
+        if (this.isContentEditable) {
           this.target.focus();
           var _range = document.getSelection().getRangeAt(0);
           var range = _range.cloneRange();
@@ -65,7 +67,7 @@
     }, {
       key: 'setPos',
       value: function setPos(position) {
-        if (this.isContentEditable === 'true') {
+        if (this.isContentEditable) {
           if (position >= 0) {
             var selection = window.getSelection();
             var range = this.createRange(this.target, {
