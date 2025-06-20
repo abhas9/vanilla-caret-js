@@ -1,4 +1,4 @@
-Set and get Caret position (contenteditable or TextArea) using Vanilla JavaScript
+Set and get caret position in contenteditable elements or text areas using vanilla JavaScript
 ====================
 
 [![NPM version][npm-version-image]][npm-url]
